@@ -37,8 +37,8 @@ const covid19ImpactEstimator = (data) => {
     impact.casesForVentilatorsByRequestedTime = Math.floor((2/100) * impact.infectionsByRequestedTime); //// 30 days period
     severeImpact.casesForVentilatorsByRequestedTime = Math.floor((2/100) * severeImpact.infectionsByRequestedTime); //// 30 days period
     
-    impact.dollarsInFlight = impact.infectionsByRequestedTime * input.region.avgDailyIncomePopulation * input.region.avgDailyIncomeInUSD * 30;   ///30 days period
-    severeImpact.dollarsInFlight = severeImpact.infectionsByRequestedTime * input.region.avgDailyIncomePopulation * input.region.avgDailyIncomeInUSD * 30;   ///30 days period
+    impact.dollarsInFlight = impact.infectionsByRequestedTime * input.region.avgDailyIncomePopulation * input.region.avgDailyIncomeInUSD * 58;   ///30 days period
+    severeImpact.dollarsInFlight = severeImpact.infectionsByRequestedTime * input.region.avgDailyIncomePopulation * input.region.avgDailyIncomeInUSD * 58;   ///30 days period
     
     return {
         data: input,
