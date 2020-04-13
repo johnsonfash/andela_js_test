@@ -46,10 +46,10 @@ const covid19ImpactEstimator = (data) => {
   severeImpact.severeCasesByRequestedTime = Math.floor((15 / 100)
   * severeImpact.infectionsByRequestedTime);
 
-  impact.hospitalBedsByRequestedTime = (input.totalHospitalBeds * (35 / 100))
-  - impact.severeCasesByRequestedTime;
-  severeImpact.hospitalBedsByRequestedTime = (input.totalHospitalBeds * (35 / 100))
-  - severeImpact.severeCasesByRequestedTime;
+  impact.hospitalBedsByRequestedTime = Math.ceil((input.totalHospitalBeds * (35 / 100))
+  - impact.severeCasesByRequestedTime);
+  severeImpact.hospitalBedsByRequestedTime = Math.ceil((input.totalHospitalBeds * (35 / 100))
+  - severeImpact.severeCasesByRequestedTime);
 
   impact.casesForICUByRequestedTime = Math.floor((5 / 100) * impact.infectionsByRequestedTime);
   severeImpact.casesForICUByRequestedTime = Math.floor((5 / 100)
@@ -61,9 +61,11 @@ const covid19ImpactEstimator = (data) => {
   * severeImpact.infectionsByRequestedTime);
 
   impact.dollarsInFlight = Math.floor(impact.infectionsByRequestedTime
-  * input.region.avgDailyIncomePopulation * input.region.avgDailyIncomeInUSD);
+  * input.region.avgDailyIncomePopulation * input.region.avgDailyIncomeInUSD)
+  * duration(periodName, period);
   severeImpact.dollarsInFlight = Math.floor(severeImpact.infectionsByRequestedTime
-  * input.region.avgDailyIncomePopulation * input.region.avgDailyIncomeInUSD);
+  * input.region.avgDailyIncomePopulation * input.region.avgDailyIncomeInUSD)
+  * duration(periodName, period);
 
   return {
     data: input,
