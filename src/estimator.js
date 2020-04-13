@@ -21,7 +21,7 @@ const covid19ImpactEstimator = (data) => {
   const period = input.timeToElapse;
   const duration = (pt, p) => {
     let days = 0;
-    if(pt === 'days') {
+    if (pt === 'days') {
       days = p;
     } else if (pt === 'weeks') {
       days = 7 * p;
@@ -33,7 +33,7 @@ const covid19ImpactEstimator = (data) => {
     return days;
   };
 
-  const time = Math.floor(duration(periodName,period) / 3);
+  const time = Math.floor(duration(periodName, period) / 3);
 
   impact.currentlyInfected = input.reportedCases * 10;
   severeImpact.currentlyInfected = input.reportedCases * 50;
