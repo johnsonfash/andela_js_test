@@ -25,28 +25,28 @@ const covid19ImpactEstimator = (data) => {
   impact.infectionsByRequestedTime = impact.currentlyInfected * (2 ** duration);
   severeImpact.infectionsByRequestedTime = severeImpact.currentlyInfected * (2 ** duration);
 
-  impact.severeCasesByRequestedTime = Math.floor((15 / 100) * 
+  impact.severeCasesByRequestedTime = Math.floor((15 / 100) *
   impact.infectionsByRequestedTime);
-  severeImpact.severeCasesByRequestedTime = Math.floor((15 / 100) * 
+  severeImpact.severeCasesByRequestedTime = Math.floor((15 / 100) *
   severeImpact.infectionsByRequestedTime);
 
-  impact.hospitalBedsByRequestedTime = Math.floor(input.totalHospitalBeds * (35 / 100) - 
+  impact.hospitalBedsByRequestedTime = Math.floor(input.totalHospitalBeds * (35 / 100) -
   impact.severeCasesByRequestedTime);
-  severeImpact.hospitalBedsByRequestedTime = Math.floor(input.totalHospitalBeds * (35 / 100)) - 
+  severeImpact.hospitalBedsByRequestedTime = Math.floor(input.totalHospitalBeds * (35 / 100)) -
   severeImpact.severeCasesByRequestedTime;
 
   impact.casesForICUByRequestedTime = Math.floor((5 / 100) * impact.infectionsByRequestedTime);
-  severeImpact.casesForICUByRequestedTime = Math.floor((5 / 100) * 
+  severeImpact.casesForICUByRequestedTime = Math.floor((5 / 100) *
   severeImpact.infectionsByRequestedTime);
 
-  impact.casesForVentilatorsByRequestedTime = Math.floor((2 / 100) * 
+  impact.casesForVentilatorsByRequestedTime = Math.floor((2 / 100) *
   impact.infectionsByRequestedTime);
-  severeImpact.casesForVentilatorsByRequestedTime = Math.floor((2 / 100) * 
+  severeImpact.casesForVentilatorsByRequestedTime = Math.floor((2 / 100) *
   severeImpact.infectionsByRequestedTime);
 
-  impact.dollarsInFlight = impact.infectionsByRequestedTime * 
+  impact.dollarsInFlight = impact.infectionsByRequestedTime *
   input.region.avgDailyIncomePopulation * input.region.avgDailyIncomeInUSD * 58;
-  severeImpact.dollarsInFlight = severeImpact.infectionsByRequestedTime * 
+  severeImpact.dollarsInFlight = severeImpact.infectionsByRequestedTime *
   input.region.avgDailyIncomePopulation * input.region.avgDailyIncomeInUSD * 58;
 
   return {
