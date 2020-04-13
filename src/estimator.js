@@ -19,18 +19,18 @@ const covid19ImpactEstimator = (data) => {
   const severeImpact = {};
   const periodName = input.periodType;
   const period = input.timeToElapse;
-  const duration = (pt,p) => {
-  let days = 0;
-  if(pt === 'days'){
-    days = p;
-  } else if (pt === 'weeks'){
-    days = 7 * p;
-  } else if (pt === 'months') {
-    days = 30 * p;
-  } else {
+  const duration = (pt, p) => {
+    let days = 0;
+    if(pt === 'days') {
+      days = p;
+    } else if (pt === 'weeks') {
+      days = 7 * p;
+    } else if (pt === 'months') {
+      days = 30 * p;
+    } else {
+      return days;
+    }
     return days;
-  }
-  return days;
   };
 
   const time = Math.floor(duration(periodName,period) / 3);
