@@ -50,9 +50,9 @@ const covid19ImpactEstimator = (data) => {
   * input.region.avgDailyIncomePopulation * input.region.avgDailyIncomeInUSD * 58;
 
   return {
-      data: input,
-      impact,
-      severeImpact
+    data: input,
+    impact,
+    severeImpact
   };
 };
 
