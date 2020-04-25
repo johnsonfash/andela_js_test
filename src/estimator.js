@@ -1,18 +1,3 @@
-// const data = {
-//     region: {
-//     name: "Africa",
-//     avgAge: 19.7,
-//     avgDailyIncomeInUSD: 5,
-//     avgDailyIncomePopulation: 0.71
-//     },
-//     periodType: "days",
-//     timeToElapse: 58,
-//     reportedCases: 674,
-//     population: 66622705,
-//     totalHospitalBeds: 1380614
-//     };
-
-
 const covid19ImpactEstimator = (data) => {
   const input = data;
   const impact = {};
@@ -46,7 +31,6 @@ const covid19ImpactEstimator = (data) => {
   severeImpact.severeCasesByRequestedTime = Math.floor((15 / 100)
   * severeImpact.infectionsByRequestedTime);
 
-
   const impactBedAvailable = ((input.totalHospitalBeds * (35 / 100))
   - impact.severeCasesByRequestedTime);
   if (impactBedAvailable > 0) {
@@ -62,8 +46,6 @@ const covid19ImpactEstimator = (data) => {
   } else {
     severeImpact.hospitalBedsByRequestedTime = Math.ceil(severeBedAvailable);
   }
-  //   severeImpact.hospitalBedsByRequestedTime = Math.ceil((input.totalHospitalBeds * (35 / 100))
-  //   - severeImpact.severeCasesByRequestedTime);
 
   impact.casesForICUByRequestedTime = Math.floor((5 / 100) * impact.infectionsByRequestedTime);
   severeImpact.casesForICUByRequestedTime = Math.floor((5 / 100)
