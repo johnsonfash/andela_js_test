@@ -1,0 +1,19 @@
+.Link {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    list-style: none;
+    padding: 0 30px;
+}
+
+.Link a {
+    text-decoration: none;
+    color: #fff;
+    transition: ease-in-out 0.1s all;
+}
+
+.Link a:hover,
+.Link a:active {
+    color: #F95E6D;
+}

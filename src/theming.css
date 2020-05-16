@@ -1,0 +1,774 @@
+* {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+[class*="grid-"] {
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.row [class*="grid-"] {
+    float: left;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.image-background {
+    background-image: url("./assets/svg.svg");
+    background-color: #fff;
+}
+
+
+/* For mobile phones: */
+
+.grid-m-10 {
+    width: 10%;
+}
+
+.grid-m-20 {
+    width: 20%;
+}
+
+.grid-m-30 {
+    width: 30%;
+}
+
+.grid-m-40 {
+    width: 40%;
+}
+
+.grid-m-50 {
+    width: 50%;
+}
+
+.grid-m-60 {
+    width: 60%;
+}
+
+.grid-m-70 {
+    width: 70%;
+}
+
+.grid-m-80 {
+    width: 80%;
+}
+
+.grid-m-90 {
+    width: 90%;
+}
+
+.grid-m-100 {
+    width: 100%;
+}
+
+
+/* .row {
+  width: 100%;
+  } */
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box
+}
+
+.clearfix:after,
+.clearfix:before {
+    content: '';
+    display: table
+}
+
+.clearfix:after {
+    clear: both;
+    display: block
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+
+/* THIS IS FOR SIGN IN AND SIGN UP */
+
+.sign_in_container {
+    background-image: url("./assets/svg.svg");
+    font: 600 16px/18px 'Open Sans', sans-serif;
+    margin-top: 1em;
+}
+
+.login-wrap {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.login-html {
+    background-color: #fff;
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.login-html .sign-in-htm,
+.login-html .sign-up-htm {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all .6s linear;
+}
+
+.login-html .sign-in,
+.login-html .sign-up {
+    display: none;
+}
+
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button {
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.login-html .tab {
+    font-size: 24px;
+    padding: 3px;
+    margin: 0 0 10px 0;
+    display: inline-block;
+    border-bottom: 3px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+
+.login-html .sign-in:checked+.tab,
+.login-html .sign-up:checked+.tab {
+    color: black;
+    border-color: #1161ee;
+}
+
+.login-form {
+    min-height: 345px;
+    overflow: hidden;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.login-form .group {
+    margin: 20px 0px;
+}
+
+
+/* .login-form .group .label, */
+
+
+/* .login-form .group .input, */
+
+.login-form .group .button {
+    width: 100%;
+    margin: 5px auto;
+    color: #fff;
+    display: block;
+    outline: none;
+}
+
+
+/* .login-form .group .input, */
+
+.login-form .group .button {
+    border: none;
+    padding: 8px 20px;
+    outline: none;
+    border-radius: 20px;
+    background: lightgrey;
+}
+
+.login-form .group .input {
+    height: 2em;
+}
+
+.login-form .group .error {
+    font-weight: normal;
+    font-size: .8em;
+    color: rgb(187, 25, 25);
+}
+
+.login-form .group input[data-type="password"] {
+    text-security: circle;
+    -webkit-text-security: circle;
+}
+
+.login-form .group .label {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.login-form .group .button {
+    border: none;
+    outline: none;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    background: #1161ee;
+    margin: 30px auto;
+}
+
+.login-form .group .button:active {
+    /* background-color: #3e8e41; */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(.5px);
+}
+
+.login-form .group label .icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    background: lightgrey;
+}
+
+.login-form .group label .icon:before,
+.login-form .group label .icon:after {
+    content: '';
+    width: 10px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    transition: all .2s ease-in-out 0s;
+}
+
+.login-form .group label .icon:before {
+    left: 3px;
+    width: 5px;
+    bottom: 6px;
+    transform: scale(0) rotate(0);
+}
+
+.login-form .group label .icon:after {
+    top: 6px;
+    right: 0;
+    transform: scale(0) rotate(0);
+}
+
+.login-form .group .check:checked+label .icon {
+    background: #1161ee;
+}
+
+.login-form .group .check:checked+label .icon:before {
+    transform: scale(1) rotate(45deg);
+}
+
+.login-form .group .check:checked+label .icon:after {
+    transform: scale(1) rotate(-45deg);
+}
+
+.login-html .sign-in:checked+.tab+.sign-up+.tab+.login-form .sign-in-htm {
+    transform: rotate(0);
+}
+
+.login-html .sign-up:checked+.tab+.login-form .sign-up-htm {
+    transform: rotate(0);
+}
+
+.login-wrap .hr {
+    height: 2px;
+    margin: 10px 0 20px 0;
+    background: rgb(231, 79, 79);
+}
+
+.foot-lnk {
+    text-align: center;
+}
+
+#loader {
+    margin: -6px;
+    padding: 0;
+    display: inline-block;
+    border: 2px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 2px solid palevioletred;
+    width: 23px;
+    height: 23px;
+    -webkit-animation: spin 1s ease infinite;
+    animation: spin 1s ease infinite;
+}
+
+
+/* Safari */
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* THIS IS FOR PANEL DESIGN */
+
+.panel_container {
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.panel_header,
+.panel_container {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row wrap;
+}
+
+.panel_container {
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.panel_header {
+    position: fixed;
+    padding-top: 5px;
+    font-size: 1.2em;
+    width: 100%;
+    overflow: hidden;
+    color: #fff;
+    background: #007bff;
+    height: 42px;
+    z-index: 2;
+}
+
+.panel_header .header_name {
+    font-size: 1.4em;
+    margin: 0 100px;
+}
+
+.panel_header .header_button .panel_logout {
+    background: none;
+    background-color: white;
+    padding: 2px 10px;
+    border: none;
+    cursor: pointer;
+    color: black;
+    outline: none;
+    margin: 3px 20px 0 0;
+    border-radius: 20px;
+}
+
+.panel_header .header_button .panel_logout:active {
+    transform: translateY(1px);
+}
+
+.panel_container .asideList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.panel_container .asideAnchor {
+    padding: 20px 15px;
+    display: block;
+    color: rgba(255, 255, 255, .75);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    transition: color .3s .15s ease-in;
+}
+
+.panel_container .asideAnchor::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    background-color: #2c3033;
+    width: 0;
+    transition: width .3s ease-in;
+    z-index: -1;
+}
+
+.panel_container .asideAnchor:hover {
+    color: #fff;
+}
+
+.panel_container .asideAnchor:hover span {
+    display: none;
+}
+
+.panel_container .asideAnchor:hover::after {
+    width: 100%;
+}
+
+.panel_container .link {
+    position: fixed;
+    height: 100vh;
+    margin-top: 42px;
+    overflow: hidden;
+    width: 0px;
+    background-color: #343a40;
+    transition: width .7s ease-in;
+}
+
+.panel_container .content {
+    position: absolute;
+    margin-top: 42px;
+    width: 100%;
+    padding: 20px;
+    /* overflow: hidden; */
+    background-color: #fff;
+    height: 100%;
+    transition: transform .7s ease-in;
+}
+
+.panel_container .content .height {
+    height: 50px;
+}
+
+.panel_container .panel_checkbox {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.panel_container .middle {
+    margin: 0 auto;
+}
+
+.panel_container .bar_label {
+    position: fixed;
+    top: 0;
+    margin: 7px 10px;
+    z-index: 3;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.panel_container .bar {
+    display: block;
+    background-color: #fff;
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    margin: 5px auto;
+    transition: transform .5s ease-in, width .5s ease-in;
+}
+
+.panel_container .dropdown_content {
+    margin-left: 0px;
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 0.7s ease-in-out, margin-left 0.4s ease-in-out;
+}
+
+.panel_container .dropdown:hover>.dropdown_content {
+    margin-left: 20px;
+    max-height: 400px;
+}
+
+.panel_container .panel_checkbox:checked~.bar_label .top {
+    -webkit-transform: translateY(7px) rotateZ(45deg);
+    -moz-transform: translateY(7px) rotateZ(45deg);
+    -ms-transform: translateY(7px) rotateZ(45deg);
+    -o-transform: translateY(7px) rotateZ(45deg);
+    transform: translateY(7px) rotateZ(45deg);
+}
+
+.panel_container .panel_checkbox:checked~.bar_label .bottom {
+    -webkit-transform: translateY(-8px) rotateZ(-45deg);
+    -moz-transform: translateY(-8px) rotateZ(-45deg);
+    -ms-transform: translateY(-8px) rotateZ(-45deg);
+    -o-transform: translateY(-8px) rotateZ(-45deg);
+    transform: translateY(-8px) rotateZ(-45deg);
+}
+
+.panel_container .panel_checkbox:checked~.bar_label .middle {
+    width: 0;
+}
+
+.panel_container .panel_checkbox:checked~.content {
+    transform: translateX(250px);
+    overflow: hidden;
+}
+
+.panel_container .panel_checkbox:checked~.link {
+    width: 250px;
+    overflow: hidden;
+}
+
+
+/* THIS IS FOR PANEL DESIGN */
+
+
+/* THIS IS FOR ORDER */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.order_content .bag-product,
+.order_content .quantity-wrapper,
+.order_content .subtotal,
+.order_content .delivery,
+.order_content .total {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.order_content {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    margin: 0 auto;
+    width: 85%;
+    background: white;
+}
+
+.order_content nav,
+.top-bar,
+.bag,
+.bag-total {
+    padding: 0.3em 1em 0em 1em;
+}
+
+.order_content nav,
+.order_content a,
+.order_content .btn-go-checkout {
+    text-decoration: none;
+    color: white;
+}
+
+.order_content nav {
+    background: #007bff;
+    overflow: hidden;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+
+/* //////////// header element */
+
+.order_content .top-bar,
+.order_content .bag-head::after,
+.order_content .bag-total::before {
+    background: whitesmoke;
+}
+
+.order_content .bag-head::after,
+.order_content .bag-total::before,
+.order_content .btn-remove {
+    display: block;
+}
+
+.order_content .bag-head::after,
+.order_content .total::after,
+.order_content .bag-total::before,
+.order_content .description-text {
+    margin: 0.5em 0;
+}
+
+.order_content .bag-head::after,
+.order_content .bag-total::before {
+    content: "";
+    width: 100%;
+    height: 3px;
+}
+
+
+/* //////////// header element */
+
+.order_content .muted {
+    color: grey;
+    font-size: 0.8em;
+}
+
+.order_content .h1 {
+    font-size: 3em;
+}
+
+.order_content .h2,
+p {
+    font-size: 1.2em;
+}
+
+.order_content .bag-total hr {
+    color: #007bff;
+    background-color: #007bff;
+}
+
+.order_content .image {
+    width: 40%;
+}
+
+.order_content .image img.product-image {
+    max-width: 100%;
+}
+
+.order_content .description {
+    padding-right: 1em;
+    width: 60%;
+}
+
+.order_content .btn-remove,
+.order_content .incremento button {
+    cursor: pointer;
+    height: 2.5em;
+    background: none;
+    border: 1px solid #007bff;
+}
+
+.order_content .btn-remove {
+    width: 5em;
+}
+
+.order_content .incremento {
+    margin-left: 2em;
+}
+
+.order_content .incremento .but {
+    width: 2.5em;
+    margin-right: 0.2em;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.order_content .quantity-wrapper .date {
+    width: 10em;
+    margin:0 0 0 1em;
+    padding: 0;
+    font-size: 1em;
+    height: 1.5em;
+	  border: 1px solid #007bff;
+}
+
+.order_content .btn-remove:active,
+.order_content .incremento button:active {
+    background-color: lightgrey;
+}
+
+.order_content .quantity-wrapper {
+    -webkit-box-align: start;
+    align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row wrap;
+    margin: 1.2em 0 1em;
+}
+
+.order_content .subtotal,
+.order_content .delivery {
+    margin-bottom: 0.5rem;
+}
+
+.order_content .total {
+    margin: 1.5em 0em;
+}
+
+.order_content .btn-go-checkout {
+    margin: 2em 0em 1em;
+    width: 100%;
+    height: 40px;
+    background: #007bff;
+    box-shadow: 0 3px 6px 2px gainsboro;
+}
+
+
+/* THIS IS FOR ORDER */
+
+html {
+    overflow: hidden;
+}
+
+
+/* THIS IS FOR SIGN IN AND SIGN UP */
+
+@media only screen and (min-width: 756px) {
+    /* For desktop: */
+    .grid-d-10 {
+        width: 10%;
+    }
+    .grid-d-20 {
+        width: 20%;
+    }
+    .grid-d-30 {
+        width: 30%;
+    }
+    .grid-d-40 {
+        width: 40%;
+    }
+    .grid-d-50 {
+        width: 50%;
+    }
+    .grid-d-60 {
+        width: 60%;
+    }
+    .grid-d-70 {
+        width: 70%;
+    }
+    .grid-d-80 {
+        width: 80%;
+    }
+    .grid-d-90 {
+        width: 90%;
+    }
+    .grid-d-100 {
+        width: 100%;
+    }
+    /* THIS IS FOR PANEL */
+    .panel_container .panel_checkbox:checked~.content {
+        transform: translateX(0px);
+    }
+    .panel_container .content {
+        position: relative;
+        margin-left: 250px;
+        width: calc(100% - 250px)
+    }
+    .panel_container .link {
+        width: 250px;
+    }
+    .panel_container .panel_checkbox,
+    .panel_container .bar_label {
+        display: none;
+    }
+    html {
+        overflow-y: auto;
+    }
+    /* THIS IS FOR PANEL */
+}
