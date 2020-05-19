@@ -10,6 +10,9 @@ import SignUp from './components/Screens/Auth/SignUp';
 // import DummyPage from './containers/LandingPage/DummyPage';
 // import Dashboard from './containers/Dashboard'
 import Order from './containers/Order/'
+import Community from './containers/Community'
+import View from './containers/Community/View'
+import Edit from './containers/Community/Editor'
 import LandingPage from './containers/LandingPage';
 
 // @desc  A function to check if user is authenticated. Check if token exists
@@ -49,10 +52,14 @@ const Route = ({ component: Component, ensureNonAuth, ...rest }) => (
 export default () => (
   <Router history={history}>
     <Switch>
+      {/* <Route ensureNonAuth exact path="/community" component={Community} /> */}
       <Route ensureNonAuth exact path="/" component={LandingPage} />
       {/* <Route ensureNonAuth exact path="/dummy" component={DummyPage} /> */}
       {/* <PrivateRoute exact path="/" component={LandingPage} /> */}
       <PrivateRoute path="/order" component={Order} />
+      <PrivateRoute exact path="/community" component={Community} />
+      <PrivateRoute path="/community/view" component={View} />
+      <PrivateRoute path="/community/edit" component={Edit} />
       <Route component={() => <h1>404 !</h1>} />
     </Switch>
   </Router>

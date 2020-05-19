@@ -712,6 +712,438 @@ p {
 
 /* THIS IS FOR ORDER */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* THIS IS FOR COMMUNITY COMBINED */
+
+/* this class is same for the three */
+.community_container, .community_container .card {
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: -webkit-box;
+  display: flex;
+  text-rendering: optimizeLegibility;
+  border-radius: 7px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+  flex-wrap: wrap;
+ }
+ 
+ /* ///////////////////////////////////////////// */
+ /* this as all in [edit,view,index] */
+ .community_container .button {
+   display: -webkit-box;
+   display: flex;
+   overflow: hidden;
+   -webkit-box-pack: justify;
+   justify-content: space-between;
+   -webkit-box-align: start;
+   align-items: flex-start;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+   flex-flow: row wrap;
+   width: 100%;
+   overflow: hidden;
+ }
+ 
+ .community_container .btn {
+  background-color: white;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  color: black;
+  width: 49%;
+  font-size: 1em;
+  /* padding: 0.5rem 0.5em 0.9em 0.5em; */
+  color: #fff;
+  text-transform: lowercase;
+ }
+ 
+ .community_container .btn_donate {
+   width: 100%;
+ }
+ .community_container .btn:active {
+  transform: translateY(1px);
+ }
+ 
+ .community_container .delete {
+  background-color: #de575e;
+ }
+ 
+ .community_container .delete:hover {
+  background-color: #ca3e45;
+ }
+ 
+ .community_container .edit {
+  background-color: #0d864a;
+ }
+ .community_container .edit:hover {
+  background-color: #087740;
+ }
+ /* this as all in [edit,view,index] */
+ /* ///////////////////////////////////////////// */
+ /* this class is same for the three */
+ 
+ 
+ /* this is same for two [edit, view] */
+ .containerFull {
+   margin: 30px auto;
+   width: 90%;
+   box-shadow: 0 10px 30px -25px rgba(0, 0, 0, 0.18);
+  display: -webkit-box;
+  display: flex;
+  overflow: hidden;
+  border: 1px solid #ecece7;
+ }
+ /* this is same for two [edit, view] */
+ 
+ 
+ /* same in two classes [view, edit] file_label */
+ /* .community_container .image img    ................................................................................. */
+ .community_container .image,  .community_container .file_label {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.community_container label img, .community_container .image img {
+   position: relative;
+   margin: 0;
+   padding: 0;
+   background-position: center;
+   object-fit: cover;
+   width: 100%;
+   height: 500px;
+ }
+ 
+ /* same in two classes [view, edit] file_label */
+ /* ...................................................................................................... */
+ 
+ 
+ /* ........................................................................ */
+ /* same for two classes [view , edit] */
+ .containerFull .hr {
+  color: whitesmoke;
+  background-color: whitesmoke;
+  opacity: 0.9;
+  border: none;
+  height: 15px;
+ }
+ /* same for two classes [view , edit] */
+ 
+ 
+ 
+ /* THIS IS FOR EDIT */
+ 
+ .community_container .file {
+   display: none;
+ }
+ 
+ .community_container .bar_upload {
+  position: absolute;
+  height: 500px;
+  width: 100%;
+  top: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.community_container .upload_icon {
+  position: relative;
+  display: block;
+  top:50%;
+  background-color: red;
+  opacity: 0.5;
+  width: 150px;
+  height: 10px;
+  border-radius: 5px;
+  margin: auto;
+
+}
+.community_container .round {
+  width: 200px;
+  height: 200px;
+  opacity: 0.2;
+  border-radius: 50%;
+  transform: translateY(-100px)
+}
+.community_container .straight {
+  transform: translateY(10px) rotate(90deg);
+}
+ 
+ .community_container .title {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  padding: 1.2em;
+ }
+
+ .community_container .title .title_input {
+   font-size: 2em;
+   width: 100%;
+   /* padding: 0.3em 0 0.3em 0.3em; */
+ }
+
+ 
+ .community_container .amount_edit_cover {
+   position: relative;
+   padding-right: 1.2em;
+   text-align: right;
+   width: 100%;
+ }
+ 
+ .community_container .amount_edit_cover .amount_edit, .community_container .amount_edit_label{
+   width: 200px;
+   font-size: 1.7em;
+   padding: 0.2em 0 0.2em 1.5em;
+ }
+ 
+ 
+ .community_container .amount_edit_cover span {
+   position: absolute;
+   padding-right: 0.6em;
+   top: 5px;
+   right: 210px;
+   font-size: 2em;
+ }
+ 
+ .community_container .detail_textarea {
+   resize: vertical;
+   width: 100%;
+   outline: none;
+   padding: 1em;
+   min-height: 150px;
+   font-size: 1.5em;
+   margin: 1.5em;
+ }
+ /* THIS IS FOR EDIT */
+ 
+ 
+   /* THIS IS FOR FULL VIEW */
+   .community_container .title_big {
+    width: 100%;
+    text-align: left;
+    font-size: 2.4em;
+    padding: 0.6em;
+   }
+ 
+   .community_container .details {
+    display: -webkit-box;
+    display: flex;
+    /* border: 1px solid red; */
+    width: 100%;
+    -webkit-box-align: start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    overflow: hidden;
+   }
+ 
+   .community_container .detail {
+    width: 50%;
+   }
+   
+   .community_container .detail, .community_container .text {
+    padding: 1em 1.5em;
+   }
+ 
+   .community_container .amount, .community_container .published, .community_container .date {
+    width: 100%;
+    padding: 0em 0 0.5em;
+    font-size: 1.2em;
+    color: black;
+   }
+   .community_container .amount span, .community_container .published {
+    color: grey;
+   }
+   .community_container .detail .meter_view {
+    width: 100%;
+    align-self: baseline;
+   }
+   /* THIS IS FOR FULL VIEW */
+ 
+ 
+ /* THIS IS FOR INDEX */
+ .community_container .card {
+   list-style: none;
+   margin: 0;
+   margin: 20px 0 0 0;
+   padding: 0;
+ }
+ .community_container .card .cards__item {
+   display: -webkit-box;
+   display: flex;
+   padding: 1rem;
+ }
+ 
+ .community_container .card .card {
+   background-color: white;
+   border: 1px solid #e2e2da;
+   border-radius: 0.25rem;
+   box-shadow: 0 10px 30px -25px rgba(0, 0, 0, 0.18);
+   display: -webkit-box;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   flex-direction: column;
+   overflow: hidden;
+ }
+ 
+ .community_container .card .card:hover {
+   box-shadow: 0 10px 35px -20px rgba(0, 0, 0, 0.51);
+ }
+ 
+ .community_container .card .card img {
+   height: 300px;
+   width: 100%;
+   background-position: center;
+   object-fit: cover;
+ }
+ 
+ .community_container .card .card_image {
+   height: 300px;
+   width: 100%;
+   overflow: hidden;
+ }
+ 
+ .community_container .card .card__content {
+   display: -webkit-box;
+   display: flex;
+   -webkit-box-flex: 1;
+   flex: 1 1 auto;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   flex-direction: column;
+   padding: 1rem;
+ }
+ 
+ .community_container .card__image::before {
+   content: "";
+   display: block;
+   padding-top: 56.25%;
+ }
+ 
+ .community_container .card__content .amount {
+   text-align: right;
+   width: 100%;
+   padding: 0em 0 0.5em;
+   font-size: 1.2em;
+   color: black;
+ }
+ .community_container .card__content .amount span {
+   color: grey;
+ }
+ 
+ .community_container .card__content .meter {
+   width: 50%;
+   align-self: flex-end;
+ }
+ 
+ .community_container .card__title {
+   color: #696969;
+   font-size: 1.25rem;
+   font-weight: 500;
+   letter-spacing: 2px;
+   margin-top: 0.8em;
+   text-transform: uppercase;
+ }
+ .community_container .card__text {
+   -webkit-box-flex: 1;
+   flex: 1 1 auto;
+   font-size: 1em;
+   line-height: 1.5;
+   margin-bottom: 0.5em;
+ }
+ 
+ .community_container .card__text span{
+   color: pink;
+   font: 1em;
+ }
+ 
+ /* THIS IS FOR INDEX */
+ 
+ 
+ 
+ 
+ /* THIS IS FOR CARDFULL_VIEW AND INDEX */
+ /* ///////////////////////////////////////////////////////////// */
+ /* this two class is same for [index, view] */
+ .community_container .meter::-webkit-meter-optimum-value{
+  background: none; /* Required to get rid of the default background property */
+  background-color: green;
+  border-radius: 0 0 20px 0;
+  box-shadow: 0 5px 5px -5px #333 inset;
+ }
+ 
+ .community_container .meter::-moz-meter-bar{
+  background: none; /* Required to get rid of the default background property */
+  background-color: #079850;
+  border-radius: 0 0 20px 0;
+  box-shadow: 0 5px 5px -5px #333 inset;
+ }
+ /* this two class is same for [index, view] */
+ /* ///////////////////////////////////////////////////////////// */
+ /* THIS IS FOR CARDFULL_VIEW AND INDEX */
+ 
+ 
+ @media screen and (min-width: 756px) {
+   /* .community_container .amount_edit {
+     width: 300px;
+   } */
+ }
+ 
+ @media (min-width: 40rem) {
+ .community_container .card__image::before {
+     padding-top: 66.6%;
+   }
+ 
+   .cards__item {
+     width: 50%;
+   }
+ }
+ @media (min-width: 60rem) {
+ 
+   .cards__item {
+     width: 33.3333%;
+   }
+ }
+/* THIS IS FOR COMMUNITY COMBINED */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 html {
     overflow: hidden;
 }
@@ -767,8 +1199,22 @@ html {
     .panel_container .bar_label {
         display: none;
     }
+
+    .cummunity_page_1 .card__image::before {
+      padding-top: 66.6%;
+    }
+  
+    .cards__item {
+      width: 50%;
+    }
     html {
         overflow-y: auto;
     }
     /* THIS IS FOR PANEL */
+}
+
+@media (min-width: 60rem) {
+  .cards__item {
+    width: 33.3333%;
+  }
 }
